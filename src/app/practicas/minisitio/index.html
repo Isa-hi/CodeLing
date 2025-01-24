@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Personal</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Estilos específicos */
+        #inicio {
+            text-align: center;
+            padding-top: 6rem;
+            background-color: #f4f4f4;
+        }
+        #inicio h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        #inicio h2 {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .tech-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .tech-logos img {
+            width: 50px;
+            height: 50px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+        }
+        .tags {
+            margin: 1rem 0;
+        }
+        .tags span {
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .social-icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0;
+        }
+        .social-icon::before {
+            font-size: 1.5rem;
+        }
+        .youtube::before { content: "YT"; }
+        .instagram::before { content: "IG"; }
+        .linkedin::before { content: "IN"; }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            #inicio h1 {
+                font-size: 2rem;
+            }
+            #inicio h2 {
+                font-size: 1.2rem;
+            }
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de mí</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Isahi Ochoa</h1>
+            <h2>Desarrollador Web Full Stack</h2>
+            <p class="tagline">Creando soluciones digitales innovadoras</p>
+        </section>
+
+        <section id="acerca">
+            <h1>Acerca de mí</h1>
+            <p>Soy un estudiante de TICs con una pasión por el desarrollo web. Desde hace un año, me he dedicado a crear proyectos útiles y innovadores, combinando tecnología y creatividad para solucionar problemas y mejorar la experiencia del usuario. Mi enfoque es claro: desarrollar soluciones web que impacten positivamente en la vida de las personas.</p>
+            <h2>Tecnologías que domino</h2>
+            <div class="tech-logos">
+                <img src="../../../../../public/logos/nextjs_icon_dark.svg" alt="Next.js">
+                <img src="../../../../../public/logos/typescript.svg" alt="TypeScript">
+                <img src="../../../../../public/logos/react.svg" alt="React">
+                <img src="../../../../../public/logos/postgresql.svg" alt="PostgreSQL">
+                <img src="../../../../../public/logos/tailwindcss.svg" alt="Tailwind CSS">
+                <img src="../../../../../public/logos/prisma.svg" alt="Prisma">
+            </div>
+        </section>
+
+        <section id="portafolio">
+            <h1>Portafolio</h1>
+            <div class="gallery">
+                <div class="project">
+                    <img src="../../../../../public/screenshots/proyecto1.png" alt="Proyecto 1">
+                    <h3>BlazeTrack</h3>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <p>Una aplicación web responsiva que permite a los usuarios gestionar sus tareas diarias de manera eficiente.</p>
+                    <a href="#" class="btn">Ver proyecto</a>
+                </div>
+                <div class="project">
+                    <img src="../../../../../public/screenshots/proyecto2.png" alt="Proyecto 2">
+                    <h3>Página de suplementos</h3>
+                    <div class="tags">
+                        <span>NextJS</span>
+                        <span>Shadcn</span>
+                        <span>Google ADS</span>
+                    </div>
+                    <p>Una landing page publicitaria que usé para una campaña en Google Ads.</p>
+                    <a href="https://www.saludconimmunotec.com" target="_blank" class="btn">Ver proyecto</a>
+                </div>
+                <div class="project">
+                    <img src="../../../../../public/screenshots/proyecto3.png" alt="Proyecto 3">
+                    <h3>UpTask</h3>
+                    <div class="tags">
+                        <span>React</span>
+                        <span>MongoDB</span>
+                        <span>Mongoose</span>
+                    </div>
+                    <p>Un dashboard de análisis de datos en tiempo real para monitorear métricas de rendimiento empresarial.</p>
+                    <a href="#" class="btn">Ver proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h1>Contacto</h1>
+            <p>¿Interesado en trabajar juntos o tienes alguna pregunta? No dudes en contactarme a través de mis redes sociales:</p>
+            <div class="social-links">
+                <a href="#" class="social-icon youtube">YouTube</a>
+                <a href="#" class="social-icon instagram">Instagram</a>
+                <a href="#" class="social-icon linkedin">LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Isahi Ochoa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
